@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Marks Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Student Marks Management System</h1>
+            <p>Manage and evaluate student academic performance</p>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Add Student Form -->
+        <section class="form-section">
+
+            <div class="section-heading">
+                <h2>Add Student Marks</h2>
+                <p>Enter student details and marks for each subject.</p>
+            </div>
+
+            <form id="marksForm">
+
+                <!-- Student Information -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+
+                        <input type="text"
+                               id="studentName"
+                               placeholder="Enter student name"
+                               required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="rollNumber">Roll Number</label>
+
+                        <input type="text"
+                               id="rollNumber"
+                               placeholder="Enter roll number"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <!-- Subject Marks -->
+                <h3>Subject Marks</h3>
+
+                <div class="marks-grid">
+
+                    <div class="form-group">
+                        <label for="maths">Mathematics</label>
+
+                        <input type="number"
+                               id="maths"
+                               min="0"
+                               max="100"
+                               placeholder="0 - 100"
+                               required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="science">Science</label>
+
+                        <input type="number"
+                               id="science"
+                               min="0"
+                               max="100"
+                               placeholder="0 - 100"
+                               required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="english">English</label>
+
+                        <input type="number"
+                               id="english"
+                               min="0"
+                               max="100"
+                               placeholder="0 - 100"
+                               required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="computer">Computer Science</label>
+
+                        <input type="number"
+                               id="computer"
+                               min="0"
+                               max="100"
+                               placeholder="0 - 100"
+                               required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="social">Social Science</label>
+
+                        <input type="number"
+                               id="social"
+                               min="0"
+                               max="100"
+                               placeholder="0 - 100"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="add-btn">
+                    Add Student
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Summary -->
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <span>Total Students</span>
+                <strong id="totalStudents">0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Passed</span>
+                <strong id="passedStudents">0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Failed</span>
+                <strong id="failedStudents">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Student Records -->
+        <section class="table-section">
+
+            <div class="section-heading">
+                <h2>Student Records</h2>
+                <p>Academic performance of all added students.</p>
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Name</th>
+                            <th>Roll No.</th>
+                            <th>Maths</th>
+                            <th>Science</th>
+                            <th>English</th>
+                            <th>Computer</th>
+                            <th>Social</th>
+                            <th>Total</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="studentTableBody">
+
+                        <tr id="noDataRow">
+                            <td colspan="12">
+                                No student records available.
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Student Marks Management System &copy; 2026</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
