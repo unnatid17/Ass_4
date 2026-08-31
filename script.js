@@ -1,22 +1,11 @@
-// Store all students
 let students = [];
-
-
-// Get the form
 const marksForm = document.getElementById("marksForm");
-
-
-// Listen for form submission
-marksForm.addEventListener("submit", function(event) {
-
-    // Prevent the page from refreshing
+marksForm.addEventListener("submit", function(event){
     event.preventDefault();
-
 
     // Get student information
     const name = document.getElementById("studentName").value.trim();
     const roll = document.getElementById("rollNumber").value.trim();
-
 
     // Get marks
     const maths = Number(document.getElementById("maths").value);
@@ -25,14 +14,11 @@ marksForm.addEventListener("submit", function(event) {
     const computer = Number(document.getElementById("computer").value);
     const social = Number(document.getElementById("social").value);
 
-
     // Calculate total
     const total = maths + science + english + computer + social;
 
-
     // Calculate percentage
     const percentage = total / 5;
-
 
     // Calculate grade
     let grade;
@@ -56,10 +42,8 @@ marksForm.addEventListener("submit", function(event) {
         grade = "F";
     }
 
-
     // Calculate result
     const result = percentage >= 40 ? "PASS" : "FAIL";
-
 
     // Create student object
     const student = {
@@ -76,14 +60,11 @@ marksForm.addEventListener("submit", function(event) {
         result: result
     };
 
-
     // Add student to the array
     students.push(student);
 
-
     // Display students
     displayStudents();
-
 
     // Clear the form
     marksForm.reset();
@@ -93,16 +74,12 @@ marksForm.addEventListener("submit", function(event) {
 
 // Display students in the table
 function displayStudents() {
-
     const tableBody = document.getElementById("studentTableBody");
-
     // Clear the table
     tableBody.innerHTML = "";
 
-
     // If there are no students
     if (students.length === 0) {
-
         tableBody.innerHTML = `
             <tr>
                 <td colspan="12">
@@ -110,17 +87,10 @@ function displayStudents() {
                 </td>
             </tr>
         `;
-
         return;
     }
-
-
-    // Add every student to the table
     students.forEach(function(student, index) {
-
         const row = document.createElement("tr");
-
-
         row.innerHTML = `
             <td>${index + 1}</td>
             <td>${student.name}</td>
@@ -137,39 +107,23 @@ function displayStudents() {
                 ${student.result}
             </td>
         `;
-
-
         tableBody.appendChild(row);
-
     });
-
 
     // Update summary
     updateSummary();
-
 }
-
 
 // Update student summary
 function updateSummary() {
-
     const totalStudents = students.length;
-
-
     const passedStudents = students.filter(function(student) {
         return student.result === "PASS";
     }).length;
-
-
     const failedStudents = students.filter(function(student) {
         return student.result === "FAIL";
     }).length;
-
-
     document.getElementById("totalStudents").innerText = totalStudents;
-
     document.getElementById("passedStudents").innerText = passedStudents;
-
     document.getElementById("failedStudents").innerText = failedStudents;
-
 }
