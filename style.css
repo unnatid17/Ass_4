@@ -6,43 +6,45 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #fff;
-    background: linear-gradient(135deg, #12002f, #240046, #001d3d);
-    min-height: 100vh;
+    background: #151515;
+    color: #eee;
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 45px 20px;
-    background: linear-gradient(90deg, #7b2cbf, #ff006e);
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #222, #333);
+    border-bottom: 1px solid #555;
 }
 
 header h1 {
-    font-size: 35px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #fff;
 }
 
-header p {
-    color: #ffe5ec;
+header p,
+.section-heading p {
+    color: #aaa;
 }
 
 /* Main */
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 35px auto;
+    margin: 30px auto;
 }
 
 /* Sections */
 .form-section,
 .table-section {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 30px;
+    background: #202020;
+    padding: 28px;
     margin-bottom: 25px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,.15);
-    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    border-radius: 14px;
+    border: 1px solid #383838;
+    box-shadow: 0 8px 25px #0008;
 }
 
 .section-heading {
@@ -50,12 +52,8 @@ header p {
 }
 
 .section-heading h2 {
-    color: #ffca3a;
+    color: #ddd;
     margin-bottom: 7px;
-}
-
-.section-heading p {
-    color: #bbb;
 }
 
 /* Form */
@@ -76,23 +74,23 @@ header p {
 .form-group label {
     display: block;
     margin-bottom: 7px;
-    color: #ddd;
+    color: #bbb;
     font-size: 14px;
 }
 
 input {
     width: 100%;
     padding: 12px;
-    border: 2px solid #5a189a;
-    border-radius: 10px;
-    background: #16002b;
-    color: white;
+    background: #151515;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
     outline: none;
 }
 
 input:focus {
-    border-color: #ffca3a;
-    box-shadow: 0 0 10px #ffca3a;
+    border-color: #888;
+    box-shadow: 0 0 8px #555;
 }
 
 /* Button */
@@ -101,39 +99,38 @@ input:focus {
     margin-top: 25px;
     padding: 14px;
     border: 0;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #ff006e, #ffca3a);
-    color: #fff;
+    border-radius: 8px;
+    background: #444;
+    color: white;
     font-weight: bold;
-    font-size: 16px;
     cursor: pointer;
 }
 
 .add-btn:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px #ff006e;
+    background: #666;
 }
 
 /* Summary */
 .summary-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 18px;
     margin-bottom: 25px;
 }
 
 .summary-card {
-    padding: 25px;
+    padding: 22px;
     text-align: center;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #3c096c, #5a189a);
+    background: #252525;
+    border: 1px solid #3d3d3d;
+    border-radius: 14px;
 }
 
 .summary-card strong {
     display: block;
-    font-size: 35px;
-    color: #ffca3a;
     margin-top: 8px;
+    font-size: 32px;
+    color: #fff;
 }
 
 /* Table */
@@ -143,31 +140,32 @@ input:focus {
 
 table {
     width: 100%;
-    border-collapse: collapse;
     min-width: 900px;
+    border-collapse: collapse;
 }
 
 th {
-    background: #5a189a;
-    color: #ffca3a;
+    background: #333;
+    color: #eee;
 }
 
 th,
 td {
     padding: 13px;
     text-align: center;
-    border-bottom: 1px solid #432066;
+    border-bottom: 1px solid #3a3a3a;
 }
 
-tr:hover {
-    background: rgba(255,255,255,.06);
+tbody tr:hover {
+    background: #292929;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    color: #aaa;
+    color: #888;
+    border-top: 1px solid #333;
 }
 
 /* Mobile */
